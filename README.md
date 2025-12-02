@@ -28,13 +28,13 @@ Each folder mentioned above contains each of these:
 
 # Team Members, Instructor, TA
 Team Members - Emma Ferrel, Anna Crawford, Stella Herzberg
-    Role includes full development of application, test suites, deployment, and documentation of Tiger Tix.
+- Role includes full development of application, test suites, deployment, and documentation of Tiger Tix.
 
 Instructor - Julian Brinkley
-    Role includes specification of assignment requirements, oversight of TAs and their roles, and assistance to student questions.
+- Role includes specification of assignment requirements, oversight of TAs and their roles, and assistance to student questions.
 
 TA - Atik Enam, Colt Doster
-    Role includes grading of submissions, recommendations for improvement, and collaboration with instructor to assist in questions and          concerns.
+- Role includes grading of submissions, recommendations for improvement, and collaboration with instructor to assist in questions and          concerns.
 
 ## Installation and Setup Instructions
 In the project directory, you can run:
