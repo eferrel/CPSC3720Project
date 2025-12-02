@@ -7,8 +7,7 @@ This project is a ticketing system built with React frontend and a service-orien
 
 # Architecture Summary
 Frontend/
-    Handles UI rendering, voice input, sending requests. Code lives under /src with       
-    React entry points such as App.js and index.js with specialized components for voice and LLM integration.
+    Handles UI rendering, voice input, sending requests. Code lives under /src with React entry points such as App.js and index.js with specialized components for voice and LLM integration.
 Backend/
  - Client-Service: Manages client-related requests and data, as well as some operations, routing, and logic specific to the client entities.
  - Admin-Service: Handles admin management, operations, models, and controllers.
@@ -16,13 +15,12 @@ Backend/
  - User-Authentication: Manages the logic for login, signups, and sessions for users.
  - Shared-db: Central database layer which is shared across devices based in SQLite.
  - Tests: Contains global and administrative test suites.
+ - Server.js is a service entrypoint.
 
 Each folder mentioned above contains each of these:
-    Controllers handle requests and logic. 
-    Models handle the database schemda and data logic. 
-    Routes are used as the API endpoints. 
-    Server.js is a service entrypoint. 
-    Tests folder contains test suites for each service.
+- Controllers handle requests and logic.
+- Models handle the database schemda and data logic.
+- Routes are used as the API endpoints.
 
 # Setting Up Environment Variables
 
