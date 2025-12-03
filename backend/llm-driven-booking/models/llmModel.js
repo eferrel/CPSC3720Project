@@ -4,12 +4,12 @@
 // by other parts of application.
 
 //attempting to make compatable with Grok
-const AI_API_KEY = process.env.XAI_API_KEY;
-const AI_MODEL = process.env.XAI_MODEL || "grok-4-latest";
+const XAI_API_KEY = process.env.XAI_API_KEY;
+const XAI_MODEL = process.env.XAI_MODEL || "grok-4-latest";
 
 //didn't rename cause I'm lazy
 export const ollamaInteraction = async (prompt, opts = {}) => {
-  if (!AI_API_KEY) {
+  if (!XAI_API_KEY) {
     throw new Error("XAI_API_KEY is not set in environment variables");
   }
 
@@ -23,7 +23,7 @@ Return ONLY a JSON object:
 }`;
 
   const body = {
-    model: AI_MODEL,
+    model: XAI_MODEL,
     messages: [
       { role: "system", content: systemInstruction },
       { role: "user", content: prompt }
@@ -37,7 +37,7 @@ Return ONLY a JSON object:
     const response = await fetch("https://api.x.ai/v1/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${AI_API_KEY}`,
+        Authorization: `Bearer ${XAI_API_KEY}`,
         "Content-Type": "application/json"
       },
       body: JSON.stringify(body)
