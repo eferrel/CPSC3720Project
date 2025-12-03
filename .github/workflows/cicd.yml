@@ -47,8 +47,10 @@ jobs:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-args: '--prod'
           working-directory: './frontend'
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          github-comment: true
+          github-deployment: false
+
+        
 
       - name: Deploy to Render
         env: 
