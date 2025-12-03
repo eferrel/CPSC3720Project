@@ -14,7 +14,8 @@ function LoginForm( {setLoggedIn, setUser }) {
     e.preventDefault();
     setError('');
     try {
-      const res = await fetch('http://localhost:8001/api/authentication/login', {
+      // const res = await fetch('http://localhost:8001/api/authentication/login', {
+      const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/authentication/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include', 
@@ -69,7 +70,8 @@ function RegistrationForm( { setLoggedIn }) {
     setSuccess('');
 
     try {
-      const res = await fetch('http://localhost:8001/api/authentication/register', {
+      // const res = await fetch('http://localhost:8001/api/authentication/register', {
+      const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/authentication/register`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({email, password})
@@ -134,7 +136,8 @@ function App() {
   // Sends request to backend and updates local state
   useEffect(() => {
     if (!loggedIn) return;
-    fetch('http://localhost:6001/api/events')
+    // fetch('http://localhost:6001/api/events')
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/events`)
     .then((res) => res.json())
     .then((data) => setEvents(data))
     .catch((err) => console.error(err));
@@ -142,7 +145,8 @@ function App() {
 
   const logout = async () => {
     try {
-      await fetch ("http://localhost:8001/api/authentication/logout", {
+      // await fetch ("http://localhost:8001/api/authentication/logout", {
+      await fetch (`${process.env.REACT_APP_BACKEND_URL}/api/authentication/logout`, {
         method: "POST", 
         credentials: "include",
       });
@@ -209,7 +213,8 @@ function App() {
     setEvents([]);
 
     try {
-      const response = await fetch('http://localhost:7001/api/llm/parse', {
+      // const response = await fetch('http://localhost:7001/api/llm/parse', {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/llm/parse`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({prompt: query})
@@ -258,7 +263,8 @@ function App() {
 
     // Send request
     try {
-      const res = await fetch(`http://localhost:6001/api/events/${id}/purchase`, {
+      // const res = await fetch(`http://localhost:6001/api/events/${id}/purchase`, {
+      const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/events/${id}/purchase`, {
         method: 'POST',
         credentials: 'include',
         headers: { 'Content-Type': 'application/json' },
