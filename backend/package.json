@@ -12,6 +12,7 @@
   "dependencies": {
     "body-parser": "^2.2.0",
     "caniuse-lite": "^1.0.30001753",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "curl": "^0.1.4",
     "express": "^5.1.0",
