@@ -118,6 +118,7 @@ export const handleOllama = async (req, res) => {
 
         console.log('assistant.parsed=', parsed);
 
+
         if (!parsed) {
             const help = { 
                 intent: null,
@@ -174,7 +175,7 @@ export const handleOllama = async (req, res) => {
 
 
     } catch (err) {
-        // console.error(err);
+        console.error(err);
         res.status(500).json({error: "Failed to correctly chat with the AI model."})
     }
 
