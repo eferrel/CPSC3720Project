@@ -50,10 +50,6 @@ jobs:
           github-comment: true
           github-deployment: false
 
-        
-      - name: Install Render CLI
-        run: npm install -g @render/cli
-        
       - name: Deploy to Render
         env: 
             RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
