@@ -1,5 +1,8 @@
 # Tiger Tix Application
 
+# Link to Demo Video
+https://www.youtube.com/watch?v=eO2Tl7fKThY&authuser=0
+
 # Overview
 This project is a ticketing system built with React frontend and a service-oriented Node backend. The system gives users a convenient way to book and manage ticketing for various Clemson events. Users can use optional voice input or LLM driven booking in the frontend to search, book an event, etc. The backend will provide services for account creation, authentication, ticket management, and more. Both pieces work together to provide a web based application that is reliable and easy to use.
 
