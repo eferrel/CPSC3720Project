@@ -4,6 +4,7 @@
 This project is a ticketing system built with React frontend and a service-oriented Node backend. The system gives users a convenient way to book and manage ticketing for various Clemson events. Users can use optional voice input or LLM driven booking in the frontend to search, book an event, etc. The backend will provide services for account creation, authentication, ticket management, and more. Both pieces work together to provide a web based application that is reliable and easy to use.
 
 # Stack
+Tiger Tix uses a modern full-stack JavaScript architecture. Reach builds the frontend interface that users can interact with, while Node.js and Express power the backend API and service logic. User and ticker data are stored in SQLite. The system also interates an LLM and voice-recognition API to enable voice-based booking which makes the process more accessible to users.
 
 # Architecture Summary
 Frontend/
@@ -23,8 +24,18 @@ Each folder mentioned above contains each of these:
 - Routes are used as the API endpoints.
 
 # Setting Up Environment Variables
+Tiger Tix uses environment variables to securely store configuration values. Each developer should create their own.
+1. In the root directory, create a file named .env
+2. Copy required variables: LLM_API_KEY, DATABASE_URL, PORT, HOST, etc.
+3. Fill in environment variables.
+4. Include "require('dotenv').config();" in the backend entry file to ensure that the project loaded environment variables.
+5. Do not commit .env files.
 
 # Running Regression Tests
+Project includes automated tests for each backend service, as well as global tests for end-to-end functionality.
+1. Install dependencies (in the backend, "npm install")
+2. From backend, run "npm test" for full test suite
+3. To run service specific tests, cd into that service folder, then "npm test"
 
 # Team Members, Instructor, TA
 Team Members - Emma Ferrell, Anna Crawford, Stella Herzberg
@@ -54,7 +65,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## License
-
+MIT License
 
 ## Learn More
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
