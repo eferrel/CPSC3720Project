@@ -59,4 +59,6 @@ jobs:
             RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
             RENDER_SERVICE_ID: ${{ secrets.RENDER_SERVICE_ID }}
         run: |
-            render deploy service $RENDER_SERVICE_ID --api-key $RENDER_API_KEY
+            curl -X POST "https://api.render.com/deploy/srv-${RENDER_SERVICE_ID}" \
+               -H "Accept: application/json" \
+               -H "Authorization: Bearer $RENDER_API_KEY"
