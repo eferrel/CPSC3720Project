@@ -3,6 +3,7 @@
 // the admin routes, ensures the database table exists, and starts listening on a port.
 // WILL NEED TO CHANGE, COPIED BASIC SERVER FROM PROVIDED TEMPLATE
 // ADMIN SERVER
+require('dotenv').config();
 
 const express = require('express');
 const cors = require('cors');

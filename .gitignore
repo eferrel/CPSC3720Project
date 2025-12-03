@@ -11,6 +11,12 @@ backend/node_modules/
 # testing
 /coverage
 
+# ignore env files
+.env
+backend/.env
+*.env
+
+
 # production
 /build
 
