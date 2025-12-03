@@ -27,7 +27,7 @@ Each folder mentioned above contains each of these:
 # Running Regression Tests
 
 # Team Members, Instructor, TA
-Team Members - Emma Ferrel, Anna Crawford, Stella Herzberg
+Team Members - Emma Ferrell, Anna Crawford, Stella Herzberg
 - Role includes full development of application, test suites, deployment, and documentation of Tiger Tix.
 
 Instructor - Julian Brinkley
