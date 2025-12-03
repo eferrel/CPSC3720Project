@@ -21,7 +21,8 @@ const uaRoutes = require('./user-authentication/routes/uaRoutes');
 
 // app.use(cors());
 app.use(cors({
-    origin: "http://localhost:3000", // CHANGE
+    // origin: "http://localhost:3000", // CHANGE
+    origin: "https://cpsc-3720-project-byqe.vercel.app",
     credentials: true
 }));
 app.use(express.json());
