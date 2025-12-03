@@ -18,7 +18,7 @@ module.exports = app
 // Client-service runs on port 7001
 if (require.main === module) {
   const PORT = 7001;
-  app.listen(PORT, () =>
-    console.log(`Server running at http://localhost:${PORT}`)
+  app.listen(PORT, '0.0.0.0', () =>
+    console.log(`Server running at http://0.0.0.0:${PORT}`)
   );
 }
