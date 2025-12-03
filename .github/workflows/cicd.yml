@@ -51,7 +51,8 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
 
       - name: Deploy to Render
-        uses: johnbeynon/render-deploy@v1.2.0
-        with:
-          api-key: ${{ secrets.RENDER_API_KEY }}
-          service-id: ${{ secrets.RENDER_SERVICE_ID }}
+        env: 
+            RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
+            RENDER_SERVICE_ID: ${{ secrets.RENDER_SERVICE_ID }}
+        run: |
+            render deploy service $RENDER_SERVICE_ID --api-key $RENDER_API_KEY
